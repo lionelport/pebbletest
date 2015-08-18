@@ -21,7 +21,7 @@ public class DemoApplication {
         PebbleViewResolver resolver = new PebbleViewResolver();
         resolver.setPebbleEngine(engine);
         resolver.setPrefix("/templates");
-        resolver.setSuffix(".html");
+        resolver.setSuffix(".twig");
         return resolver;
     }
 }
