@@ -17,10 +17,9 @@ public class DemoApplication {
 
     @Bean
     public ViewResolver viewResolver() {
-        PebbleEngine engine = new PebbleEngine(new ClasspathLoader());
         PebbleViewResolver resolver = new PebbleViewResolver();
-        resolver.setPebbleEngine(engine);
-        resolver.setPrefix("/templates");
+        resolver.setPebbleEngine(new PebbleEngine(new ClasspathLoader()));
+        resolver.setPrefix("templates");
         resolver.setSuffix(".twig");
         return resolver;
     }
